@@ -33,14 +33,14 @@ export default function DashboardPage() {
   }, [loading, user]);
 
   const statCards = [
-    { title: "Today's Sales", value: '$53,000', change: '+30%', accent: 'text-emerald-500' },
-    { title: "Today's Users", value: String(stats?.employees ?? 3200), change: '+20%', accent: 'text-emerald-500' },
-    { title: 'New Clients', value: `+${stats?.distributors ?? 1200}`, change: '-20%', accent: 'text-red-500' },
-    { title: 'New Orders', value: `$${stats?.products ?? 13200}`, change: '+10%', accent: 'text-emerald-500' },
+    { title: "Today's Sales", value: '0', change: '0%', accent: 'text-emerald-500' },
+    { title: "Total's Users", value: String(stats?.employees ?? 3200), change: '0%', accent: 'text-emerald-500' },
+    { title: 'Total Distributors', value: '0', change: '0%', accent: 'text-red-500' },
+    { title: "Today's oRDER", value: '0', change: '0%', accent: 'text-emerald-500' },
   ];
 
   return (
-    <Shell title="Dashboard" subtitle="Modern overview layout inspired by your Ant Design reference.">
+    <Shell title="Dashboard" subtitle="">
       {err ? <div className="mb-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">{err}</div> : null}
 
       <div className="grid-stats">
@@ -82,10 +82,10 @@ export default function DashboardPage() {
           </div>
 
           <div className="mt-5 grid grid-cols-4 gap-3 text-center">
-            <div className="rounded-2xl bg-slate-50 p-3"><div className="text-2xl font-black">3.6K</div><div className="text-xs text-black/45">Users</div></div>
-            <div className="rounded-2xl bg-slate-50 p-3"><div className="text-2xl font-black">2m</div><div className="text-xs text-black/45">Clicks</div></div>
-            <div className="rounded-2xl bg-slate-50 p-3"><div className="text-2xl font-black">$772</div><div className="text-xs text-black/45">Sales</div></div>
-            <div className="rounded-2xl bg-slate-50 p-3"><div className="text-2xl font-black">82</div><div className="text-xs text-black/45">Items</div></div>
+            <div className="rounded-2xl bg-slate-50 p-3"><div className="text-2xl font-black">0</div><div className="text-xs text-black/45">Users</div></div>
+            <div className="rounded-2xl bg-slate-50 p-3"><div className="text-2xl font-black">0</div><div className="text-xs text-black/45">Clicks</div></div>
+            <div className="rounded-2xl bg-slate-50 p-3"><div className="text-2xl font-black">0</div><div className="text-xs text-black/45">Sales</div></div>
+            <div className="rounded-2xl bg-slate-50 p-3"><div className="text-2xl font-black">0</div><div className="text-xs text-black/45">Items</div></div>
           </div>
         </Card>
 
@@ -166,10 +166,10 @@ export default function DashboardPage() {
 
           <div className="mt-4 space-y-4">
             {[
-              ['S.42M — Region store', 'Jun 24 2026', 'bg-emerald-500'],
-              ['New order #354323', 'Jun 18 2026', 'bg-green-400'],
-              ['Company server payments', 'Jun 13 2026', 'bg-sky-500'],
-              ['New card added', 'Jun 12 2026', 'bg-blue-400'],
+              ['New order #354323', 'Jun 24 2026', 'bg-emerald-500'],
+              // ['New order #354323', 'Jun 18 2026', 'bg-green-400'],
+              // ['New order #354323', 'Jun 13 2026', 'bg-sky-500'],
+              // ['New order #354323', 'Jun 12 2026', 'bg-blue-400'],
             ].map((item) => (
               <div key={item[0]} className="flex gap-3">
                 <div className={`mt-1 h-3 w-3 rounded-full ${item[2]}`} />
